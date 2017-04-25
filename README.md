@@ -1,2 +1,3 @@
-# wildcraft
-Jenkins 2.0 : Declarative pipeline examples
+# What's this repo?
+
+Jenkins 2.0 : Examples of declarative pipeline usage
