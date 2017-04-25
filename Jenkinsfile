@@ -15,15 +15,5 @@ pipeline {
            '''
       }
     }
-    stage('Commit') {
-      steps {
-        sh '''
-        commit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
-        sha1id = commit.take(7)
-        commitChangeset = sh(returnStdout: true, script: 'git diff-tree --no-commit-id --name-status -r HEAD').trim()
-        echo "~~> changeset that is part of commit id, ${sha1id}, is, ${commitChangeset}" 
-        '''
-      }
-    }
   }
 }
