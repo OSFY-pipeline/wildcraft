@@ -15,12 +15,5 @@ pipeline {
            '''
       }
     }
-    stage('Commit') {
-      steps {
-        sh '''commit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()'''
-        sh '''sha1id = commit.take(7)'''
-        sh ''' echo "~~> Commit id, ${sha1id}" '''
-      }
-    }
   }
 }
